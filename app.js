@@ -1,28 +1,16 @@
-const logger = require("./logger");
-const path = require("path");
-const os = require("os");
 const fs = require("fs");
+const tarea = require("./tarea");
 
-let pathObject = path.parse(__filename);
+console.log(tarea.getFilesInsidePath('./'));
 
-logger.log("path", pathObject);
+tarea.printGetFilesInsidePath('./');
 
-let freeMem = os.freemem();
-let totalMem = os.totalmem();
+tarea.printSortedGetFilesInsidePath('./');
 
-// console.log('free',freeMem);
-// console.log('total',totalMem);
+console.log(
+    tarea.getFileStartsWithLetter('./','t')
+);
 
-logger.log("free", freeMem);
-logger.log("total", totalMem);
-
-let rootDir = fs.readdirSync('./');
-
-console.log('sync',rootDir);
-
-
-fs.readdir('./', (err,files) => {
-    (err) ? console.log(err) : console.log('async',files);
-     
-    
-} );
+console.log(
+    tarea.getFileCountStartsWithLetter('./','t')
+);
