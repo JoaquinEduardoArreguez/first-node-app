@@ -29,7 +29,7 @@ const getFileStartsWithLetter = (myPath,startingLetter) => {
 
 // Retorna la cantidad de files cuyo nombre empiezan con
 // la letra startingLetter recibida por parametro.
-const getFileCountStartsWithLetter = (myPath,startingLetter) => { return (getFileStartsWithLetter(myPath,startingLetter)).length };
+const getFileCountStartsWithLetter = (myPath,startingLetter) => { return (getFileStartsWithLetter(myPath,startingLetter)).length; };
 
 module.exports.getFilesInsidePath = getFilesInsidePath;
 module.exports.printGetFilesInsidePath = printGetFilesInsidePath;
